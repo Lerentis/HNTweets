@@ -5,7 +5,7 @@ account (http://twitter.com/HNTweets)
 The project consists of a main script 'HNTweets.py', and a script to clear down the
 database 'cleanup.py'. Both of which can be invoked with no arguments, for example:
 
-    python HNTweets.py
+    python2.7 HNTweets.py
 
 The script will import the 'settings' module, i.e. it relies on having a
 settings.py file in the same directory. The 'settings.py.dummy' file is included
@@ -15,21 +15,22 @@ settings.py.dummy to settings.py:
 
     mv settings.py.dummy settings.py
 
-And then populate the missing fields with a valid bit.ly and Twitter security
+And then populate the missing fields with a valid bit.ly, Twitter and Mastodon security
 information.
 
-The setting DEBUG_MODE can be set to true to prevent the acutal posting of
-messages to Twitter.
+The setting DEBUG_MODE can be set to true to prevent the actual posting of
+messages to Twitter or Mastodon.
 
 ## Requirements
 This code requires:
 
 * sqlite3
 * tweepy
+* Mastodon.py
 
-The file requirements.txt contains the output of pip freeze -l and can be used to install any non-standard libaries like so:
+The file requirements.txt contains the output of pip freeze -l and can be used to install any non-standard libraries like so:
 
-    pip install -r requirements.txt
+    pip2.7 install -r requirements.txt
 
 # License
 This code is licensed under the Simplified BSD License
